@@ -2,13 +2,24 @@ import Link from "next/link";
 import styles from "./button.module.css";
 
 
-export default function Button({ link, children }) {
+export default function Button({ link, onClick, children }) {
+    if (link) {
+        return (
+            <Link
+                href={link}
+                className={styles.btn}
+            >
+                {children}
+            </Link>
+        );
+    };
+    
     return (
-        <Link
-            href={link}
+        <button
             className={styles.btn}
+            onClick={onClick}
         >
             {children}
-        </Link>
-    );
+        </button>
+    )
 };

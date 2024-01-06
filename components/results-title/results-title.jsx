@@ -1,5 +1,5 @@
 import Button from "../ui/button";
-import classes from "./results-title.module.css";
+import styles from "./results-title.module.css";
 
 
 export default function ResultsTitle({ date }) {

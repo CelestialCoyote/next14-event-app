@@ -1,7 +1,15 @@
+import EventList from "../../components/events/event-list";
+import EventsSearch from "../../components/events/events-search";
+import { getAllEvents } from "../../dummy-data";
+
+
 export default function AllEvents() {
+    const events = getAllEvents();
+
     return (
-        <main>
-            <h1>AllEvents</h1>
-        </main>
+        <>
+            <EventsSearch />
+            <EventList items={events} />
+        </>
     );
 };
