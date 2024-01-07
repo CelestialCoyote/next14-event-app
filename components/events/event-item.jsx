@@ -1,4 +1,4 @@
-import Button from "../ui/button";
+import Button from "../ui/button/button";
 import AddressIcon from "../icons/address-icon";
 import ArrowRightIcon from "../icons/arrow-right-icon";
 import DateIcon from "../icons/date-icon";
@@ -28,12 +28,18 @@ export default function EventItem({ title, image, date, location, id }) {
 
                     <div className={styles.date}>
                         <DateIcon />
-                        <time>{humanReadableDate}</time>
+
+                        <time>
+                            {humanReadableDate}
+                        </time>
                     </div>
 
                     <div className={styles.address}>
                         <AddressIcon />
-                        <address>{formattedAddress}</address>
+
+                        <address>
+                            {formattedAddress}
+                        </address>
                     </div>
                 </div>
 
